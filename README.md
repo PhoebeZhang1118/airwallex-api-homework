@@ -2,7 +2,7 @@
 A robust testing framework built with Java, TestNG, and REST Assured for validating the Airwallex Foreign Exchange Rates API.
 
 ## Key Features
-- Comprehensive positive test cases for rate queries
+- Positive test scenarios for rate queries
 
 - Negative test scenarios for error handling
 
@@ -18,7 +18,7 @@ src/
 │   ├── api/            # API client implementations
 │   ├── actions/        # Test actions and assertions  
 │   ├── models/         # Response data structures
-│   └── utils/          # Utility classes
+│   └── utils/          # Config file parsing classes
 └── test/java/com/airwallex/
 ├── tests/          # Test classes
 └── listeners/      # Test listeners
@@ -33,19 +33,19 @@ src/
 
 ## Running Tests
 ### Using Maven
-** Run all tests: ** 
-bash
+- Run all tests:
+bash 
 mvn test
 
-** Run specific test class: **
+- Run specific test class: 
 bash
 mvn test -Dtest=com.airwallex.tests.FxRatesPositiveTests
 
-** Run specific test method:**
+- Run specific test method:
 bash
 mvn test -Dtest=com.airwallex.tests.FxRatesPositiveTests#testValidAudUsdWithAmount
 
-** Run with custom testng.xml: **
+- Run with custom testng.xml:
 bash
 mvn test -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml
 
